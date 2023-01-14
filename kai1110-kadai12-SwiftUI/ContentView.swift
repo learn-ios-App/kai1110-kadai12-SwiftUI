@@ -31,10 +31,12 @@ struct ContentView: View {
             }
         }
     }
-    func parseNumber(number: String) -> Int {
+
+    private func parseNumber(number: String) -> Int {
         Int(number) ?? 0
     }
-    func calclateTax(price: String, taxRate: String) -> Int {
+
+    private func calclateTax(price: String, taxRate: String) -> Int {
         let tax = parseNumber(number: price) * parseNumber(number: taxRate) / 100
         return parseNumber(number: price) + tax
     }
